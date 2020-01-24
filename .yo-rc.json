@@ -1,0 +1,42 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.sgaraba.store",
+      "nativeLanguage": "en"
+    },
+    "jhipsterVersion": "6.6.0",
+    "applicationType": "monolith",
+    "baseName": "jhipster",
+    "packageName": "com.sgaraba.store",
+    "packageFolder": "com/sgaraba/store",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "no",
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "prodDatabaseType": "postgresql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "YzcwMGRkMWYyZWJkOTc5MzA5MzhmMjQ5Yjc0Yzc0NjEyNGI2Y2YyNDkwZmFhY2RmZmM0YTQwNjNlNmRkMjVhNWM0YzQwNjA5NDVkZGE1ZDM4MWFmYjc0N2JkZjNmZDVlMWMxY2RiMjg2MTMyMWE4MmIxNTEzNzdmYTIyZjZiOTg=",
+    "embeddableLaunchScript": false,
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "clientFramework": "angularX",
+    "clientTheme": "none",
+    "clientThemeVariant": "",
+    "creationTimestamp": 1579876513784,
+    "testFrameworks": ["gatling", "cucumber", "protractor"],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": true,
+    "nativeLanguage": "en",
+    "languages": ["en", "ro", "ru"],
+    "blueprints": []
+  }
+}
