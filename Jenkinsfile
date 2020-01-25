@@ -18,16 +18,8 @@ node {
             sh "./mvnw -ntp checkstyle:check"
         }
 
-        stage('install tools') {
-            sh "./mvnw -ntp com.github.eirslett:frontend-maven-plugin:install-node-and-npm -DnodeVersion=v12.13.1 -DnpmVersion=6.13.4"
-        }
-
-        stage('npm install') {
-            sh "./mvnw -ntp com.github.eirslett:frontend-maven-plugin:npm"
-        }
-
-         stage('package and deploy') {
-            sh "./mvnw -ntp com.heroku.sdk:heroku-maven-plugin:2.0.5:deploy -DskipTests -Pprod -Dheroku.buildpacks=heroku/jvm -Dheroku.appName=sgstore"
+        stage('package and deploy') {
+            sh "./mvnw -DskipTests clean package -Pprod"
             archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true
         }
         
