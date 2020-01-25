@@ -30,4 +30,12 @@ node {
         // https://github.com/GoogleContainerTools/jib/tree/master/jib-maven-plugin#authentication-methods
         sh "./mvnw -ntp jib:build"
     }
+
+    stage('pull docker image') {
+        sh "docker-compose -f src/main/docker/app.yml pull"
+    }
+
+    stage('run app in docker container') {
+        sh "docker-compose -f src/main/docker/app.yml up -d"
+    }
 }

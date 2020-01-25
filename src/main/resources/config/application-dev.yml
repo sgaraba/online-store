@@ -37,7 +37,7 @@ spring:
       indent-output: true
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:h2:file:~/h2/db/online-store;DB_CLOSE_DELAY=-1
+    url: jdbc:h2:file:~/h2/db/store-dev;DB_CLOSE_DELAY=-1
     username: jhipster
     password:
     hikari:
