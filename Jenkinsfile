@@ -30,6 +30,7 @@ node {
             sh "./mvnw -ntp com.heroku.sdk:heroku-maven-plugin:2.0.5:deploy -DskipTests -Pprod -Dheroku.buildpacks=heroku/jvm -Dheroku.appName=sgstore"
             archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true
         }
+        
         stage('quality analysis') {
             withSonarQubeEnv('sonar') {
                 sh "./mvnw -ntp initialize sonar:sonar"
